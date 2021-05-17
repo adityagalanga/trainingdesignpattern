@@ -4,42 +4,42 @@ using UnityEngine;
 
 public abstract class Command
 {
-    public abstract void Execute(Animator anim);
+    public abstract void Execute(Animator anim,bool forward);
 }
 public class MoveFoward : Command
 {
-    public override void Execute(Animator anim)
+    public override void Execute(Animator anim, bool forward)
     {
-        anim.SetTrigger("isWalking");
+        anim.SetTrigger(forward ?"isWalking" : "isWalkingR");
     }
 }
 
 public class PerformJump : Command
 {
-    public override void Execute(Animator anim)
+    public override void Execute(Animator anim, bool forward)
     {
-        anim.SetTrigger("isJumping");
+        anim.SetTrigger(forward ? "isJumping" :"isJumpingR");
     }
 }
 
 public class PerformPunch : Command
 {
-    public override void Execute(Animator anim)
+    public override void Execute(Animator anim, bool forward)
     {
-        anim.SetTrigger("isPunching");
+        anim.SetTrigger(forward ? "isPunching" : "isPunchingR");
     }
 }
 
 public class PerformKick : Command
 {
-    public override void Execute(Animator anim)
+    public override void Execute(Animator anim, bool forward)
     {
-        anim.SetTrigger("isKicking");
+        anim.SetTrigger(forward ? "isKicking" : "isKickingR");
     }
 }
 public class DoNothing : Command
 {
-    public override void Execute(Animator anim)
+    public override void Execute(Animator anim, bool forward)
     {
         
     }

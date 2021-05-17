@@ -36,22 +36,22 @@ public class InputHandler : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            KeyQ.Execute(anim);
+            KeyQ.Execute(anim,true);
             oldCommands.Add(KeyQ);
         }
         else if (Input.GetKeyDown(KeyCode.W))
         {
-            KeyW.Execute(anim);
+            KeyW.Execute(anim,true);
             oldCommands.Add(KeyW);
         }
         else if (Input.GetKeyDown(KeyCode.E))
         {
-            KeyE.Execute(anim);
+            KeyE.Execute(anim,true);
             oldCommands.Add(KeyE);
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            upArrow.Execute(anim);
+            upArrow.Execute(anim,true);
             oldCommands.Add(upArrow);
         }
 
@@ -67,9 +67,12 @@ public class InputHandler : MonoBehaviour
 
     void UndoLastCommand()
     {
-        Command c = oldCommands[oldCommands.Count - 1];
-        c.Execute(anim);
-        oldCommands.RemoveAt(oldCommands.Count - 1);
+        if(oldCommands.Count > 0)
+        {
+            Command c = oldCommands[oldCommands.Count - 1];
+            c.Execute(anim,false);
+            oldCommands.RemoveAt(oldCommands.Count - 1);
+        }
     }
     void StartReplay()
     {
@@ -90,7 +93,7 @@ public class InputHandler : MonoBehaviour
 
         for(int i = 0; i < oldCommands.Count; i++)
         {
-            oldCommands[i].Execute(anim);
+            oldCommands[i].Execute(anim,true);
             yield return new WaitForSeconds(1f);
         }
 
