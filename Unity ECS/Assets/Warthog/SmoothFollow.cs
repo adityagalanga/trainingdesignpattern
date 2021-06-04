@@ -19,7 +19,7 @@ public class SmoothFollow : MonoBehaviour
 	void Start() { }
 
 	// Update is called once per frame
-	void Update()
+	void LateUpdate()
 	{
 		// Early out if we don't have a target
 		if (!target)
