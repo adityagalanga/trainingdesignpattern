@@ -200,7 +200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &314461144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,8 +214,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cube: {fileID: 7132561849599754393, guid: 2e49f77c70aa119439f83a9c2f92b89a, type: 3}
-  rows: 1000
-  cols: 1000
+  rows: 100
+  cols: 100
 --- !u!4 &314461145
 Transform:
   m_ObjectHideFlags: 0
@@ -333,6 +333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1011210885}
   - component: {fileID: 1011210884}
+  - component: {fileID: 1011210887}
   - component: {fileID: 1011210883}
   - component: {fileID: 1011210882}
   - component: {fileID: 1011210886}
@@ -410,7 +411,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1011210881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.49, y: 7.67, z: 8.43}
+  m_LocalPosition: {x: 10, y: 5, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -433,6 +434,20 @@ MonoBehaviour:
   height: 5
   rotationDamping: 0
   heightDamping: 2
+--- !u!114 &1011210887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1011210881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5c362949e591214785e42b919d892b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  rotationSpeed: 100
 --- !u!1 &1079600875
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,7 +465,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1079600876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,7 +478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e861936f0a7e51f4fa283ca038b9cd24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cube: {fileID: 387327911352615554, guid: 3a2ad0ac9e33d4143ade1f386a1fc028, type: 3}
+  cube: {fileID: 3332155687974328994, guid: a81b09941cc52cc419740e4964237c43, type: 3}
   rows: 100
   cols: 100
 --- !u!114 &1079600877
@@ -478,7 +493,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea7d7495833204790ba1d3a8755397f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ConversionMode: 0
+  ConversionMode: 1
 --- !u!4 &1079600878
 Transform:
   m_ObjectHideFlags: 0
@@ -487,7 +502,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1079600875}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 36.092865, y: 1.1886902, z: 31.665436}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

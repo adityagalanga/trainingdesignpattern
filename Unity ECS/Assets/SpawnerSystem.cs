@@ -31,7 +31,7 @@ public class SpawnerSystem : SystemBase
                         var instance = commandBuffer.Instantiate(entityInQueryIndex, spawner.Prefab);
 
                         var pos = math.transform(location.Value,
-                            new float3(x, noise.cnoise(new float2(x, z) * 0.21f), z));
+                            new float3(x, noise.cnoise(new float2(x, z) * 0.21f) * 3, z));
                         commandBuffer.SetComponent(entityInQueryIndex, instance, new Translation { Value = pos });
                     }
                 }
