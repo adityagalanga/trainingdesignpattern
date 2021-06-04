@@ -10,7 +10,7 @@ public class CubeSpawner : MonoBehaviour
     {
         if(Random.Range(0,100) < 10)
         {
-            ProcCube.CreateCube(this.transform.position);
+            ProcCube.Clone(this.transform.position);
         }
     }
 }
